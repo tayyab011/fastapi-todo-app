@@ -52,7 +52,7 @@ def create_user(new_user: createUsers , db: Session = Depends(get_db)):
          hash_password = bcrypt_context.hash(new_user.password),
          is_active = True,
          role = new_user.role,
-         phone = new_user.phone
+      
     )
     db.add(user_model)
     db.commit()
