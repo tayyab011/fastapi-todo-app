@@ -1,7 +1,8 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
-SQLALCHEMY_DATABASE_URI = 'sqlite:///./todosapp.db'
+#SQLALCHEMY_DATABASE_URI = 'sqlite:///./todosapp.db'
+SQLALCHEMY_DATABASE_URI = 'postgresql://postgres.wdzwivygrsmatojufort:testtayyab321@aws-0-ap-southeast-1.pooler.supabase.com:5432/postgres' #for postgresql database with supabase
 #SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:@localhost:3306/todoapplication'
 engine = create_engine(SQLALCHEMY_DATABASE_URI , connect_args={"check_same_thread": False}) #needs for sqlite 3 
 #engine = create_engine(SQLALCHEMY_DATABASE_URI ) eta postgresql er jonne lagbe
